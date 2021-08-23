@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://hihello.monster/js/w3.js"></script>
+
+
+<style>
+    .button-auto {
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 14px;
+        padding: 12px;
+        width: 100%;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 0px;
+    }
+    
+    .button-auto span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button-auto span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button-auto:hover span {
+        padding-right: 25px;
+    }
+    
+    .button-auto:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    html {
+        box-sizing: border-box
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit
+    }
+    
+    html {
+        box-sizing: border-box
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit
+    }
+    /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+    
+    html {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%
+    }
+    
+    body {
+        margin: 0
+    }
+    
+    a {
+        background-color: transparent
+    }
+    
+    a:active,
+    a:hover {
+        outline-width: 0
+    }
+    
+    b {
+        font-weight: bolder
+    }
+    
+    button {
+        font: inherit;
+        margin: 0
+    }
+    
+    button {
+        overflow: visible
+    }
+    
+    button {
+        text-transform: none
+    }
+    
+    button {
+        -webkit-appearance: button
+    }
+    
+    button::-moz-focus-inner {
+        border-style: none;
+        padding: 0
+    }
+    
+    button:-moz-focusring {
+        outline: 1px dotted ButtonText
+    }
+    
+     ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit
+    }
+    /* End extract */
+    
+    html,
+    body {
+        font-family: Verdana, sans-serif;
+        font-size: 15px;
+        line-height: 1.5
+    }
+    
+    html {
+        overflow-x: hidden
+    }
+    
+    h2 {
+        font-size: 30px
+    }
+    
+    h2 {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0
+    }
+    
+    a {
+        color: inherit
+    }
+    
+     :disabled * {
+        pointer-events: none
+    }
+    
+    .hi-container:after,
+    .hi-container:before {
+        content: "";
+        display: table;
+        clear: both
+    }
+    
+    .hi-content {
+        margin-left: auto;
+        margin-right: auto
+    }
+    
+    .hi-content {
+        max-width: 980px
+    }
+    
+    .hi-round-large {
+        border-radius: 8px
+    }
+    
+    .hi-container {
+        padding: 0.01em 16px
+    }
+    
+    .hi-center {
+        text-align: center!important
+    }
+    
+    .hi-border {
+        border: 1px solid #ccc!important
+    }
+    
+    .hi-padding-32 {
+        padding-top: 32px!important;
+        padding-bottom: 32px!important
+    }
+    /* Colors */
+</style>
+
+<body>
+    <h2>Mapa de Sitio</h2>
+
+
+    <div id="viajes" w3-repeat="XiiberViajesGay" class="hi-container hi-content hi-center hi-padding-32 " style="max-width:800px ">
+        <a href="{{href}}">
+            <button class="button-auto hi-border hi-round-large " style="vertical-align:middle "><span><b>{{destino}}</b> </span></button><br><br>
+        </a>
+    </div>
+
+
+    <!-- Inicia hiHelloMonster -->
+    <script>
+        w3.getHttpObject("xiiber.js", myFunction);
+
+        function myFunction(myObject) {
+            w3.displayObject("viajesGay", myObject);
+        }
+    </script>
+    <!-- Termina hiHelloMonster  -->
+
+
+
+
+</body>
+
+</html>
